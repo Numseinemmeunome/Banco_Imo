@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    display: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300vh;
+
+}
+.img-bg {
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    top: 0;
+}
+.homer{
+    position: flex;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 110vh;  
+}
+.nav{
+    position: absolute;
+    top: 0;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    background: linear-gradient(rgba(31, 31, 31, 0.8), transparent);
+    z-index: 100;
+}
+
+.nav-logo p{
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.nav-menu ul{
+    display: flex;
+}
+.nav-menu ul li{
+    list-style-type: none;
+}
+.nav-menu ul li .link{
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+    padding-bottom: 15px;
+    margin: 0 25px;
+}
+.link:hover, .active{
+    border-bottom: 2px solid #fff;
+}
+.nav-button .btn{
+    width: 130px;
+    height: 40px;
+    font-weight: 500;
+    background: rgba(255, 255, 255, 0.4);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+.btn:hover{
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.nav-menu-btn{
+    display: none;
+}
+
+.main{
+    display: flex;
+    justify-content: right;
+    align-items: right;
+
+    max-width: 700px;
+    width: 100%; 
+    position: absolute;
+    left: 15%;
+}
+.container{
+    min-height: 60vh;
+    justify-content:left;
+    display:flex;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.container h1{
+    font-size:100px;
+    font-weight: 620;
+    color: #2a2a2a;
+    right: 10%;
+}
+
+.container h2{
+    position: relative;
+    font-size:40px;
+    font-weight: 500;
+    left: 25%;
+    top: 5%;
+    color: #2a2a2a;
+}
