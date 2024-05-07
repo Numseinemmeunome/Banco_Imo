@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+.body{
+    display: center;
+    align-items: center;
+    flex-direction: column;
+    height: 600vh;
+    background-color: rgba(0, 0, 0, 0.1);
+      
+}
+.App {
+    display: center;
+    align-items: center;
+    flex-direction: column;
+    height: 300vh;
+}

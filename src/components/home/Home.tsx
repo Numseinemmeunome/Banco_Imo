@@ -1,37 +1,24 @@
 import React from "react"
 import { useState } from "react";
 import './Home.css'
+import { Route, Router } from "react-router-dom";
 
 const Home = () => {
 
+    const handleClick = () => {
+        Route
+    }
     return(
-    <div className="homer">
-
-        <img
-        className="img-bg"
-        src="./src\assets\Empresa.jpg"
-        alt="Random image"/>
-
-        <nav className="nav">
-        <div className="nav-logo">
-            <p>Banco Imo.</p>
-        </div>
-        <div className="nav-menu">
-            <ul>
-                <li><a href="#" className="link active">Home</a></li>
-                <li><a href="#" className="link">Pedro</a></li>
-                <li><a href="#" className="link">Rules</a></li>
-                <li><a href="#" className="link">Cards</a></li>
-                <li><a href="#" className="link">About</a></li>
-            </ul>
-        </div>
-    </nav>    
+    <div className="homer">  
         <div className="main">
             <div className="container">
                 <div className="section">
                     <h1>Banco Imo</h1>
                     <h2>Batatatata</h2>
                 </div>
+            <button className="button" onClick={handleClick}>Acessar
+                <div className="seta"></div>
+            </button>
             </div>
         </div>
     </div>

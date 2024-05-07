@@ -8,21 +8,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 
-body{
-    display: center;
-    align-items: center;
-    flex-direction: column;
-    height: 300vh;
 
-}
-.img-bg {
-    opacity: 0.6;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    top: 0;
-}
 .homer{
     position: flex;
     display: flex;
@@ -30,62 +16,23 @@ body{
     align-items: center;
     min-height: 110vh;  
 }
-.nav{
+.homer::before {
+    content: "";
     position: absolute;
     top: 0;
-    display: flex;
-    justify-content: space-around;
+    left: 0;
     width: 100%;
-    height: 100px;
-    line-height: 100px;
-    background: linear-gradient(rgba(31, 31, 31, 0.8), transparent);
-    z-index: 100;
-}
-
-.nav-logo p{
-    color: white;
-    font-size: 25px;
-    font-weight: 600;
-}
-
-.nav-menu ul{
-    display: flex;
-}
-.nav-menu ul li{
-    list-style-type: none;
-}
-.nav-menu ul li .link{
-    text-decoration: none;
-    font-weight: 500;
-    color: #fff;
-    padding-bottom: 15px;
-    margin: 0 25px;
-}
-.link:hover, .active{
-    border-bottom: 2px solid #fff;
-}
-.nav-button .btn{
-    width: 130px;
-    height: 40px;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.4);
-    border: none;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: .3s ease;
-}
-.btn:hover{
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.nav-menu-btn{
-    display: none;
+    height: 100%;
+    opacity: 0.5;
+    background: url("../../assets/Empresa.jpg") no-repeat;
+    background-size: cover;
+    z-index: -1;
 }
 
 .main{
     display: flex;
-    justify-content: right;
-    align-items: right;
+    justify-content: center;
+    align-items: center;
 
     max-width: 700px;
     width: 100%; 
@@ -99,12 +46,44 @@ body{
     flex-shrink: 1;
     flex-grow: 1;
 }
-
+.button {
+    font-size: 20px;
+    font-weight: 600;
+    display: flex;
+    width: 22%;
+    height: 9%;
+    background: rgba(255, 255, 255, 0.3);
+    color: #2a2a2a;
+    box-shadow: rgba(255, 255, 255, 0.3);
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.5em 1.1em;
+    font-family: inherit;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+.button:hover {
+    border-color: #000000;
+}
+.button:focus,
+.button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+.button .seta {
+    position: absolute;
+    padding: 10px;
+    box-shadow: 2px -2px 0 1px #000 inset;
+    border: solid transparent;
+    border-width: 0 0 1px 1px;
+    transform: rotate(225deg);
+    
+}
 .container h1{
     font-size:100px;
     font-weight: 620;
     color: #2a2a2a;
     right: 10%;
+    line-height: 1.1
 }
 
 .container h2{
@@ -115,3 +94,4 @@ body{
     top: 5%;
     color: #2a2a2a;
 }
+

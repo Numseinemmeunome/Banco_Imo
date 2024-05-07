@@ -1,15 +1,16 @@
-import {BrowserRouter, Routes, Route} from "react-router-dom";
 import './App.css';
-
-import Home from './components/home/Home.tsx';
+import { Outlet } from "react-router-dom";
+import Navbar from './components/Navbar';
 
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      <Route path="/" element ={<Home/>}/>
-    </Routes>
-    </BrowserRouter>
+    <div className="App">
+      
+      <Navbar/>
+      
+      <Outlet/>
+      <p>Footer</p>
+    </div>
   );
 }
 
