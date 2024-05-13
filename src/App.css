@@ -5,13 +5,12 @@
     display: center;
     align-items: center;
     flex-direction: column;
-    height: 600vh;
     background-color: rgba(0, 0, 0, 0.1);
-      
+    justify-content: center;
 }
 .App {
     display: center;
     align-items: center;
     flex-direction: column;
-    height: 300vh;
+    
 }

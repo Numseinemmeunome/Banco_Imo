@@ -8,77 +8,93 @@
     font-family: 'Montserrat', sans-serif;
 }
 
+.body{
+    width: 100%;
 
-.homer{
-    position: flex;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 110vh;  
 }
-.homer::before {
+.main{
+    width: 100%;
+    justify-content:center;
+    display: block;
+    align-items: center;
+}
+
+.section {
+    margin-top: 5%;
+    display:flex;
+    justify-content: space-between;
+    
+}
+.profile{
+    min-height: 90vh;
+    justify-content:center;
+    display: block;
+
+    flex-shrink: 1;
+    flex-grow: 1;
+    width: 100%;
+}
+.profile::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    opacity: 0.5;
     background: url("../../assets/Empresa.jpg") no-repeat;
     background-size: cover;
-    z-index: -1;
+    opacity: 0.5; /* Apply opacity here */
+    z-index: -1; /* Ensure it's behind the content */
 }
-
-.main{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+.container-profile{
     max-width: 700px;
-    width: 100%; 
-    position: absolute;
+    width: 80%; 
+    position: relative;
     left: 15%;
+    top: 260px;
+
 }
-.container{
-    min-height: 60vh;
-    justify-content:left;
-    display:flex;
-    flex-shrink: 1;
-    flex-grow: 1;
-}
-.button {
+
+
+.btn {
     font-size: 20px;
     font-weight: 600;
-    display: flex;
-    width: 22%;
-    height: 9%;
-    background: rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    background: transparent;
     color: #2a2a2a;
     box-shadow: rgba(255, 255, 255, 0.3);
     border-radius: 8px;
-    border: 1px solid transparent;
-    padding: 0.5em 1.1em;
+    border: 2px solid #2a2a2a;
+    padding: 12px 33px;
     font-family: inherit;
     cursor: pointer;
-    transition: border-color 0.25s;
+    position: relative;
+    
 }
-.button:hover {
-    border-color: #000000;
+
+a:-webkit-any-link {
+    text-decoration: none;
 }
-.button:focus,
-.button:focus-visible {
+.btn:hover::after {
+    width: 100%;
+}
+.btn:focus,
+.btn:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
-.button .seta {
+.btn .seta {
     position: absolute;
     padding: 10px;
-    box-shadow: 2px -2px 0 1px #000 inset;
+    box-shadow: 1px -1px 0 1px #2a2a2a inset;
     border: solid transparent;
     border-width: 0 0 1px 1px;
     transform: rotate(225deg);
-    
+    display: inline;
 }
-.container h1{
+
+
+.profile h1{
+    padding-left: 10%;
     font-size:100px;
     font-weight: 620;
     color: #2a2a2a;
@@ -86,12 +102,65 @@
     line-height: 1.1
 }
 
-.container h2{
+.profile h2{
     position: relative;
     font-size:40px;
     font-weight: 500;
-    left: 25%;
+    left: 8%;
     top: 5%;
     color: #2a2a2a;
+    
 }
 
+.container-rules{
+    width: 100%;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+    padding-top: 36%;
+    padding-bottom: 36%;
+    background-color: #2a2a2a;
+    height: 25%;
+}
+.container-rules .btn{
+    color: #fff;
+    box-shadow: #2a2a2a;
+}
+.container-rules .seta{
+    
+    box-shadow: 1px -1px 0 1px #fff inset;
+}
+.rules h1{
+    font-size:100px;
+    font-weight: 620;
+    color: #ffffff;
+    right: 10%;
+    line-height: 1.1
+}
+
+.rules h2{
+    position: relative;
+    font-size:40px;
+    font-weight: 500;
+    left: 8%;
+    top: 5%;
+    color: #ffffff;
+}
+
+@media(max-width: 700px){
+
+    .profile h1{
+        font-size: 60px;
+        padding-left: 0%;
+    }
+    .profile h2{
+        font-size: 25px;        
+        font-weight: 600;
+    }
+    .rules h1{
+        font-size: 60px;
+    }
+    .rules h2{
+        font-size: 25px; 
+    }
+}

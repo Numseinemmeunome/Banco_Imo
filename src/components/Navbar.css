@@ -10,21 +10,26 @@
 .body{
     display: center;
     align-items: center;
-    flex-direction: column;
-    height: 300vh;
     background-color: rgba(0, 0, 0, 0.1);
       
 }
 .nav{
-    position: absolute;
     top: 0;
     display: flex;
-    justify-content: space-around;
-    width: 100%;
+    justify-content: space-between;
+    position: fixed;
     height: 100px;
     line-height: 100px;
     background: linear-gradient(rgba(31, 31, 31, 0.8), transparent);
-    z-index: 100;
+    transition: 1s;
+    padding: 2% 8%;
+    width: 100%;
+}
+nav .closeIcon{
+    display: none;
+}
+nav .openIcon{
+    display: none;
 }
 
 .nav-logo p{
@@ -33,11 +38,14 @@
     font-weight: 600;
 }
 
-.nav-menu ul{
-    display: flex;
+.nav-menu{
+    flex: 1;
+    text-align: right;
 }
 .nav-menu ul li{
     list-style-type: none;
+    display: inline-block;
+    position: relative;
 }
 .nav-menu ul li .link{
     text-decoration: none;
@@ -45,10 +53,14 @@
     color: #fff;
     padding-bottom: 15px;
     margin: 0 25px;
+
 }
+
 .link:hover, .active{
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #fff;    
+
 }
+
 .nav-button .btn{
     width: 130px;
     height: 40px;
@@ -65,4 +77,38 @@
 
 .nav-menu-btn{
     display: none;
+}
+
+
+@media(max-width: 700px){
+    .nav-menu ul li{
+        display: block;
+        
+    }
+    .nav{
+        position: relative;
+    }
+    .nav-menu{
+        position: relative; /* Adjust as needed */
+        background: transparent;
+        height: auto;
+        width: auto;
+        top: 0;
+        right: 0; /* Reset to default */
+        text-align: right;
+        z-index: 1;
+    }
+    nav .openIcon{
+        display: block;
+        position: absolute;
+        top: 32px; /* Adjust as needed */
+        right: 10px; /* Adjust as needed */
+        font-size: 24px; /* Adjust as needed */
+        color: #fff; /* Adjust as needed */
+        cursor: pointer;
+        z-index: 3; /* Ensure it's above other elements */
+    }
+    .nav-menu ul{
+        padding: 30px;
+    }
 }
